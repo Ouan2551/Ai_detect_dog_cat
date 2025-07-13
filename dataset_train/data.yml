@@ -1,0 +1,6 @@
+train : D:\Important files Nannaphat\coding\Project\Open_cv_detect_dog_cat\dataset_train\train
+val : D:\Important files Nannaphat\coding\Project\Open_cv_detect_dog_cat\dataset_train\val
+nc : 2
+classes : D:\Important files Nannaphat\coding\Project\Open_cv_detect_dog_cat\dataset_train\classes.txt
+names : ['Cat', 'Dog']
+notes : D:\Important files Nannaphat\coding\Project\Open_cv_detect_dog_cat\dataset_train\notes.json
