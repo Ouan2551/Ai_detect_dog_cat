@@ -2,7 +2,7 @@
 
 # 📝 Introduction
 This is my first simple project about Ai using for detect and classification images with Convolutional Neural Network.
-I created this project because in the future, I want to apply this knowledges into Electrical engineering project at university.
+I created this project because in the future, I want to apply this knowledges into Engineering project at university.
 
 # 🤓 What I learn
 - Basic of Machine Learning and Deep Learning (my taking notes live in folder name lecture(taking_notes) ✏️)
