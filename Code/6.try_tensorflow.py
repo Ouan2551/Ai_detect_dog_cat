@@ -31,6 +31,7 @@ labels = to_categorical(labels, num_classes=2)
 
 # train/test
 x_train, x_val, y_train, y_val = train_test_split(data, labels, test_size=0.2, random_state=42)
+# random_state using for random weight, algorithm, batch (same every time)
 
 # create cnn model
 from tensorflow.keras.models import Sequential #type: ignore
@@ -49,12 +50,16 @@ model = Sequential([
     Dense(2, activation='softmax')  # output 2 class
 ])
 
+from tensorflow.keras.optimizers import Adam #type: ignore
+# learning_rate = 0.01; optimizer = Adam(learning_rate=learning_rate) # custom learning rate (constant value)
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+# adam using constant value (learning_rate = 0.001)
+# model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 model.summary()
 
 # train model
-EPOCHS = 22
-BATCH_SIZE = 64
+EPOCHS = 30
+BATCH_SIZE = 32
 
 history = model.fit(
     x_train, y_train,
@@ -63,14 +68,15 @@ history = model.fit(
     batch_size=BATCH_SIZE
 )
 
-model.save(r"D:\Important files Nannaphat\coding\Project\Ai_detect_dog_cat\model\dog_cat_model_tf.h5")
+# save model
+model.save(r"D:\Important files Nannaphat\coding\Project\Ai_detect_dog_cat\model\dog_cat_model_tf1.h5")
 
 # graph accuracy and loss
-plt.plot(history.history['accuracy'], label='Train Accuracy')
-plt.plot(history.history['val_accuracy'], label='Val Accuracy')
-plt.xlabel("Epochs")
-plt.ylabel("Accuracy")
-plt.title("Training vs Validation Accuracy")
-plt.legend()
-plt.grid(True)
-plt.show()
+# plt.plot(history.history['accuracy'], label='Train Accuracy')
+# plt.plot(history.history['val_accuracy'], label='Val Accuracy')
+# plt.xlabel("Epochs")
+# plt.ylabel("Accuracy")
+# plt.title("Training vs Validation Accuracy")
+# plt.legend()
+# plt.grid(True)
+# plt.show()

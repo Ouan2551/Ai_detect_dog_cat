@@ -17,5 +17,7 @@ def predict_image(img_path):
     pred = loaded_model.predict(img)[0]
     return categories[np.argmax(pred)]
 
+# directory of picture for testing model
 # print(predict_image(r'D:\Important files Nannaphat\coding\Project\Ai_detect_dog_cat\Data\Dog\9.jpg'))
-print(predict_image(r"D:\Important files Nannaphat\coding\Project\Ai_detect_dog_cat\dataset_train\val\images\4a37ca86-61.jpg"))
+# print(predict_image(r"D:\Important files Nannaphat\coding\Project\Ai_detect_dog_cat\dataset_train\val\images\4a37ca86-61.jpg"))
+print(predict_image(r"D:\quick_share\IMG_20250308_141318.jpg"))
